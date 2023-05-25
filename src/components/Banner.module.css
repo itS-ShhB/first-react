@@ -1,0 +1,28 @@
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.container svg {
+  width: 100%;
+}
+
+.textContainer {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.textContainer h1 {
+  font-size: 5rem;
+  color: #fff;
+}
+.textContainer p {
+  font-size: 3rem;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.textContainer span {
+  color: #30c0e4;
+}

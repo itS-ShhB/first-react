@@ -1,0 +1,30 @@
+.header {
+  padding: 5px 10px;
+  text-align: center;
+  justify-content: space-between;
+  background-color: black;
+  display: flex;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.list li {
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.list li:hover {
+  color: #5000ca;
+}
+
+.logo {
+  width: 25px;
+  border-radius: 50%;
+  margin: auto 0;
+  padding: 5px;
+}
