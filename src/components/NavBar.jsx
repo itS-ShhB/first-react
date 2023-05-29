@@ -1,5 +1,6 @@
-import './NavBar.css'
-import logo from '../assets/logo.png'
+import "./NavBar.css";
+import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 export default function NavBar() {
   return (
@@ -7,9 +8,15 @@ export default function NavBar() {
       <header className="header">
         <div className="containerList">
           <ul className="list">
-            <li>Home</li>
-            <li>Products</li>
-            <li>About Us</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/products">Products</Link>
+            </li>
+            <li>
+              <Link to="/">About Us</Link>
+            </li>
           </ul>
         </div>
         <div className="logo">

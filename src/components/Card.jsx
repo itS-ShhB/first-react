@@ -25,18 +25,19 @@ export default class Card extends Component {
   };
 
   render() {
-    const { images, name, cost } = this.props;
+    const { image, title, price } = this.props;
     const { counter } = this.state;
     return (
       <div className={styles.container}>
-        <img src={images} alt="Iphone 11" />
-        <h3>{name}</h3>
+        <img src={image} alt="Iphone 11" />
+        <h3>{title}</h3>
         <p>
-          {cost} {counter ? `* ${counter} = ${counter * cost.split(" ")[0]} $` : ""}
+          {price}{" "}
+          {counter ? `* ${counter} = ${counter * price.split(" ")[0]} $` : ""}
         </p>
         <div className={styles.counter}>
           <img
-            className={!this.state.counter && styles.deactive}
+            className={!this.state.counter ? styles.deactive : ""}
             src={down}
             alt="down"
             onClick={this.downHandler}
