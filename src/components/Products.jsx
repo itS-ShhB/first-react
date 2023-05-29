@@ -3,6 +3,7 @@ import axios from "axios";
 import { v4 } from "uuid";
 
 import Card from "./Card";
+import styles from "./Products.module.css";
 
 export default class Products extends Component {
   constructor(props) {
@@ -21,16 +22,21 @@ export default class Products extends Component {
   }
 
   render() {
+    const { products } = this.state;
     return (
-      <div>
-        {this.state.products.map((products) => (
-          <Card
-            key={v4()}
-            image={products.image}
-            title={products.title}
-            price={products.price}
-          />
-        ))}
+      <div className={styles.container}>
+        {products.length ? (
+          products.map((products) => (
+            <Card
+              key={v4()}
+              image={products.image}
+              title={products.title}
+              price={`${products.price} $`}
+            />
+          ))
+        ) : (
+          <h1>Loading...</h1>
+        )}
       </div>
     );
   }
